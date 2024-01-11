@@ -32,10 +32,12 @@ const listItemStyle = {
 
 const CharacterDetails = () => {
   const { id } = useParams();
-  const character = useSelector((state) => state.characters.find((character) => character.id === parseInt(id)));
+  const character = useSelector((state) =>
+    state.characters.find((character) => character.id === parseInt(id))
+  );
 
   if (!character) {
-    console.log(character)
+    console.log(character);
     return <Typography variant="h5">Character not found</Typography>;
   }
 

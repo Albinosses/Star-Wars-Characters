@@ -26,7 +26,12 @@ const linkStyle = {
 
 const CharacterCard = ({ name, id }) => {
   return (
-    <Card style={cardStyle} component={Link} to={`/characters/${id}`} className="character-card-link">
+    <Card
+      style={cardStyle}
+      component={Link}
+      to={`/characters/${id}`}
+      className="character-card-link"
+    >
       <CardContent style={contentStyle}>
         <Typography variant="h6" color="primary" align="center">
           {name}
