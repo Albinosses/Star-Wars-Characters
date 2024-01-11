@@ -16,17 +16,15 @@ const CharacterList = () => {
   const applyFilters = (characters) => {
     const { movies, name, gender, mass } = filters;
 
-    console.log(characters);
+    console.log(characters)
 
     return characters.filter((character) => {
-      if (movies && !movies.every((movie) => character.films.includes(movie))) {
+
+      if (movies && !movies.every(movie => character.films.includes(movie))){
         return false;
       }
 
-      if (
-        name &&
-        character.name.toLowerCase().indexOf(name.toLowerCase()) === -1
-      ) {
+      if (name && character.name.toLowerCase().indexOf(name.toLowerCase()) === -1) {
         return false;
       }
 
